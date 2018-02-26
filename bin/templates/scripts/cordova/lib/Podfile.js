@@ -28,11 +28,12 @@ var CordovaError = require('cordova-common').CordovaError;
 
 Podfile.FILENAME = 'Podfile';
 
-function Podfile (podFilePath, projectName) {
+function Podfile (podFilePath, projectName, minDeploymentTarget) {
     this.podToken = '##INSERT_POD##';
 
     this.path = podFilePath;
     this.projectName = projectName;
+    this.minDeploymentTarget = minDeploymentTarget || '9.0';
     this.contents = null;
     this.pods = null;
     this.__dirty = false;
