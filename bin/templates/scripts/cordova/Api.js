@@ -253,7 +253,7 @@ Api.prototype.addPlugin = function (plugin, installOptions) {
             var Podfile = require('./lib/Podfile').Podfile;
             var PodsJson = require('./lib/PodsJson').PodsJson;
 
-            events.emit('verbose', 'Adding pods since the plugin contained <framework>(s) with type="podspec"');
+            events.emit('verbose', 'Adding pods since the plugin contained <framework>(s) with type="podspec" ' + minDeploymentTarget);
 
             var podsjsonFile = new PodsJson(path.join(project_dir, PodsJson.FILENAME));
             var podfileFile = new Podfile(path.join(project_dir, Podfile.FILENAME), project_name, minDeploymentTarget);
