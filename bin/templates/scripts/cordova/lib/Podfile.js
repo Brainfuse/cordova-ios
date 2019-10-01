@@ -33,7 +33,12 @@ function Podfile (podFilePath, projectName, minDeploymentTarget) {
 
     this.path = podFilePath;
     this.projectName = projectName;
-    this.minDeploymentTarget = minDeploymentTarget || '9.0';
+    /**
+     * Changed it back to a hard coded version because cordova wkwebview 
+     * changes the version to 11.
+     * https://github.com/ionic-team/cordova-plugin-ionic-webview/blob/master/plugin.xml#L67
+     */
+    this.minDeploymentTarget = '9.0';
     this.contents = null;
     this.pods = null;
     this.__dirty = false;
