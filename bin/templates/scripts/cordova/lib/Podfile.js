@@ -38,7 +38,7 @@ function Podfile (podFilePath, projectName, minDeploymentTarget) {
      * changes the version to 11.
      * https://github.com/ionic-team/cordova-plugin-ionic-webview/blob/master/plugin.xml#L67
      */
-    this.minDeploymentTarget = '9.0';
+    this.minDeploymentTarget = '10.0';
     this.contents = null;
     this.pods = null;
     this.__dirty = false;
